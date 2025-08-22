@@ -1,20 +1,27 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import GradientButton from '../components/GradientButton';
 
 const types = ['.docx', '.csv', 'Foto'];
 
 export default function CargaTipo() {
   return (
-    <View style={styles.container}>
-      {types.map((t) => (
-        <TouchableOpacity key={t} style={styles.button}>
-          <Text>{t}</Text>
-        </TouchableOpacity>
-      ))}
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.card}>
+        {types.map((t) => (
+          <GradientButton key={t} title={t} style={styles.button} />
+        ))}
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  button: { backgroundColor: '#ddd', padding: 12, marginVertical: 8, width: '80%', alignItems: 'center' },
+  container: { padding: 20 },
+  card: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
+  button: { marginVertical: 8, width: '80%' },
 });

@@ -1,5 +1,6 @@
-import { Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { Text, StyleSheet, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
+import GradientButton from '../components/GradientButton';
 
 const flows = [
   { label: 'Digitar', path: '/censos/digitar' },
@@ -16,9 +17,7 @@ export default function CensosHome() {
       <Text style={styles.title}>Censos</Text>
       {flows.map((f) => (
         <Link key={f.path} href={f.path} asChild>
-          <TouchableOpacity style={styles.button}>
-            <Text>{f.label}</Text>
-          </TouchableOpacity>
+          <GradientButton title={f.label} style={styles.button} />
         </Link>
       ))}
     </ScrollView>
@@ -28,11 +27,5 @@ export default function CensosHome() {
 const styles = StyleSheet.create({
   container: { padding: 20 },
   title: { fontSize: 24, fontWeight: 'bold', marginBottom: 16 },
-  button: {
-    padding: 12,
-    backgroundColor: '#ddd',
-    marginBottom: 10,
-    borderRadius: 4,
-    alignItems: 'center',
-  },
+  button: { marginBottom: 10 },
 });
