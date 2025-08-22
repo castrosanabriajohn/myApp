@@ -1,16 +1,22 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
+import GradientButton from '../components/GradientButton';
 
 export default function CargaFoto() {
   return (
-    <View style={styles.container}>
-      <TouchableOpacity style={styles.button}>
-        <Text>Subir foto</Text>
-      </TouchableOpacity>
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={styles.card}>
+        <GradientButton title="Subir foto" />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: 'center', alignItems: 'center' },
-  button: { backgroundColor: '#ddd', padding: 12, borderRadius: 4 },
+  container: { padding: 20 },
+  card: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderRadius: 8,
+    alignItems: 'center',
+  },
 });
