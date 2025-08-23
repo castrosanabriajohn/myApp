@@ -48,3 +48,13 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## Run in Expo Snack
+
+To preview this project in [Expo Snack](https://snack.expo.dev/):
+
+1. Copy the `App.tsx` file and the entire `app` directory into a new Snack.
+2. Use Snack's **Add Dependency** option to include the packages listed in `package.json`.
+
+Alternatively, you can import this repository directly in Snack by selecting **Import GitHub** and providing the repo URL.
+
