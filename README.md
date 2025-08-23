@@ -52,9 +52,9 @@ Join our community of developers creating universal apps.
 ## Run in Expo Snack
 
 To preview this project in [Expo Snack](https://snack.expo.dev/):
-
-1. Copy the `App.tsx` file, the entire `app` directory, and any `.d.ts` declaration files (e.g. `expo-linear-gradient.d.ts`, `expo-router-entry.d.ts`) into a new Snack.
-2. Use Snack's **Add Dependency** option to include the packages listed in `package.json`.
+1. Snack expects an `App.js` entry file. This repository includes a small `App.js` that re-exports the TypeScript entry so the app loads correctly.
+2. Copy `App.js`, `App.tsx`, the entire `app` directory, and any `.d.ts` declaration files (e.g. `expo-linear-gradient.d.ts`, `expo-router-entry.d.ts`) into a new Snack.
+3. Use Snack's **Add Dependency** option to include the packages listed in `package.json`.
 
 Alternatively, you can import this repository directly in Snack by selecting **Import GitHub** and providing the repo URL.
 

@@ -1,5 +1,5 @@
 import { TouchableOpacity, Text, StyleSheet, ViewStyle } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient'; // eslint-disable-line import/no-unresolved
+import { LinearGradient } from 'expo-linear-gradient';
 
 interface Props {
   title: string;
